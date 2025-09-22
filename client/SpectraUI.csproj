@@ -9,6 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\home-btn.png" />
+    <None Remove="Images\icons-btn.png" />
+    <None Remove="Images\settings-btn.png" />
+    <None Remove="Images\sound-btn.png" />
+    <None Remove="Images\userpage-btn.png" />
+    <None Remove="Images\wallpaper-btn.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <COMReference Include="{215d64d2-031c-33c7-96e3-61794cd1ee61}">
       <WrapperTool>tlbimp</WrapperTool>
       <VersionMinor>4</VersionMinor>
@@ -23,6 +32,15 @@
     <PackageReference Include="Prism.Wpf" Version="9.0.537" />
     <PackageReference Include="System.Windows.Forms.Ribbon35" Version="3.5.8" />
     <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.21" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\home-btn.png" />
+    <Resource Include="Images\icons-btn.png" />
+    <Resource Include="Images\settings-btn.png" />
+    <Resource Include="Images\sound-btn.png" />
+    <Resource Include="Images\userpage-btn.png" />
+    <Resource Include="Images\wallpaper-btn.png" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,4 @@
-﻿using SpectraUI.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,22 +15,13 @@ using System.Windows.Shapes;
 namespace SpectraUI
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow(RegionManager regionManager)
+        public MainWindow()
         {
             InitializeComponent();
-            regionManager.RegisterViewWithRegion("ContentRegion", typeof(MainView));
-        }
-
-        private void HeaderMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.ChangedButton == MouseButton.Left)
-            {
-                this.DragMove();
-            }
         }
     }
 }
