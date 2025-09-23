@@ -13,47 +13,45 @@
         ResizeMode="CanResize"
         Background="Transparent">
     <Grid>
-        <Border Background="#141228" MouseDown="Border_MouseDown"
-        CornerRadius="32"/>
+        <Border Background="#141228" MouseDown="Border_MouseDown" CornerRadius="32"/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="86" />
                 <ColumnDefinition Width="764" />
             </Grid.ColumnDefinitions>
         </Grid>
-
         <Grid HorizontalAlignment="Left" Width="86">
             <Border Background="#19162b" CornerRadius="32,0,0,32"/>
-                <StackPanel Margin="0, 115" Height="360" Width="86">
-                <RadioButton Height="64" Command="{Binding HomeCommand}" Style="{StaticResource Btn_Style}">
-                    <Grid Margin="0,0,142,0">
+                <StackPanel Margin="0, 96" Height="280" Width="86">
+                <RadioButton Command="{Binding HomeCommand}" Style="{StaticResource Btn_Style}">
+                    <Grid Margin="0,0,0,0">
                         <Image Source="Images/home-btn.png" Style="{StaticResource Image_Style}" />
                     </Grid>
                 </RadioButton>
-                <RadioButton Height="64" Command="{Binding WallpaperCommand}" Style="{StaticResource Btn_Style}">
-                    <Grid Margin="0,0,142,0">
+                <RadioButton Command="{Binding WallpaperCommand}" Style="{StaticResource Btn_Style}">
+                    <Grid Margin="0,0,0,0">
                         <Image Source="/Images/wallpaper-btn.png" Style="{StaticResource Image_Style}" />
                     </Grid>
                 </RadioButton>
-                <RadioButton Height="64" Command="{Binding IconsCommand}" Style="{StaticResource Btn_Style}">
-                    <Grid Margin="0,0,142,0">
+                <RadioButton Command="{Binding IconsCommand}" Style="{StaticResource Btn_Style}">
+                    <Grid Margin="0,0,0,0">
                         <Image Source="Images/icons-btn.png" Style="{StaticResource Image_Style}" />
                     </Grid>
                 </RadioButton>
-                <RadioButton Height="64" Command="{Binding SoundsCommand}" Style="{StaticResource Btn_Style}">
-                    <Grid Margin="0,0,142,0">
+                <RadioButton Command="{Binding SoundsCommand}" Style="{StaticResource Btn_Style}">
+                    <Grid Margin="0,0,0,0">
                         <Image Source="/Images/sound-btn.png" Style="{StaticResource Image_Style}" />
                     </Grid>
                 </RadioButton>
-                <RadioButton Height="64" Command="{Binding SoundsCommand}" Style="{StaticResource Btn_Style}">
-                    <Grid Margin="0,0,142,0">
-                        <Image Source="/Images/settings-btn.png" Style="{StaticResource Image_Style}" />
+                <RadioButton Command="{Binding SoundsCommand}" Style="{StaticResource Btn_Style}">
+                    <Grid Margin="0,0,0,0">
+                        <Image Source="/Images/settings-btn.png" Style="{StaticResource Image_Style}" Panel.ZIndex="-100" />
                     </Grid>
                 </RadioButton>
             </StackPanel>
-            <StackPanel Margin="0, 472, 0, 0" Height="64" Width="86">
-                <RadioButton Height="64" Command="{Binding UserCommand}" Style="{StaticResource Btn_Style}">
-                    <Grid Margin="0,0,142,0">
+            <StackPanel Margin="0, 512, 0, 0" Height="60" Width="86">
+                <RadioButton Command="{Binding UserCommand}" Style="{StaticResource Btn_Style}">
+                    <Grid Margin="0,0,0,0">
                         <Image Source="/Images/userpage-btn.png" Style="{StaticResource Image_Style}" />
                     </Grid>
                 </RadioButton>
