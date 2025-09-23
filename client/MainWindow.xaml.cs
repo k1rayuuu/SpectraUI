@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Prism.Navigation.Regions;
+using SpectraUI.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,12 @@ namespace SpectraUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly IRegionManager _regionManager;
+
+        public MainWindow(IRegionManager regionManager)
         {
             InitializeComponent();
+            regionManager.RegisterViewWithRegion("ContentRegion", typeof(MainView));
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -30,6 +35,11 @@ namespace SpectraUI
             {
                 this.DragMove();
             }
+        }
+
+        private void CloseApp_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

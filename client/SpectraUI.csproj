@@ -6,13 +6,17 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\SpectraUI-Logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\exit-btn.png" />
     <None Remove="Images\home-btn.png" />
     <None Remove="Images\icons-btn.png" />
     <None Remove="Images\settings-btn.png" />
+    <None Remove="Images\shutdown_mo.png" />
     <None Remove="Images\sound-btn.png" />
+    <None Remove="Images\SpectraUI-Logo.png" />
     <None Remove="Images\userpage-btn.png" />
     <None Remove="Images\wallpaper-btn.png" />
   </ItemGroup>
@@ -27,6 +31,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Images\SpectraUI-Logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="LibVLCSharp.WPF" Version="3.9.4" />
     <PackageReference Include="Prism.Unity" Version="9.0.537" />
     <PackageReference Include="Prism.Wpf" Version="9.0.537" />
@@ -35,10 +43,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\exit-btn.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\home-btn.png" />
     <Resource Include="Images\icons-btn.png" />
     <Resource Include="Images\settings-btn.png" />
     <Resource Include="Images\sound-btn.png" />
+    <Resource Include="Images\SpectraUI-Logo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\userpage-btn.png" />
     <Resource Include="Images\wallpaper-btn.png" />
   </ItemGroup>

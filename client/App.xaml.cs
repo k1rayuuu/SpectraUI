@@ -21,6 +21,7 @@ namespace SpectraUI
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<MainView>();
+            containerRegistry.RegisterForNavigation<MainWindow, MainWindowViewModel>(); 
             containerRegistry.RegisterForNavigation<WallpaperView>();
             containerRegistry.RegisterForNavigation<TaskBarView>();
             containerRegistry.RegisterForNavigation<SoundsView>();

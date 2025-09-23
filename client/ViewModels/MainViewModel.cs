@@ -8,5 +8,6 @@ namespace SpectraUI.ViewModels
 {
     class MainViewModel
     {
+        
     }
 }
