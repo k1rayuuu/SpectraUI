@@ -10,9 +10,10 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
+        ResizeMode="CanResize"
         Background="Transparent">
     <Grid>
-        <Border Background="#141228"
+        <Border Background="#141228" MouseDown="Border_MouseDown"
         CornerRadius="32"/>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -23,7 +24,7 @@
 
         <Grid HorizontalAlignment="Left" Width="86">
             <Border Background="#19162b" CornerRadius="32,0,0,32"/>
-                <StackPanel Margin="0, 115" Height="400" Width="86">
+                <StackPanel Margin="0, 115" Height="360" Width="86">
                 <RadioButton Height="64" Command="{Binding HomeCommand}" Style="{StaticResource Btn_Style}">
                     <Grid Margin="0,0,142,0">
                         <Image Source="Images/home-btn.png" Style="{StaticResource Image_Style}" />
@@ -51,7 +52,7 @@
                 </RadioButton>
             </StackPanel>
             <StackPanel Margin="0, 472, 0, 0" Height="64" Width="86">
-                <RadioButton Height="64" Command="{Binding WallpaperCommand}" Style="{StaticResource Btn_Style}">
+                <RadioButton Height="64" Command="{Binding UserCommand}" Style="{StaticResource Btn_Style}">
                     <Grid Margin="0,0,142,0">
                         <Image Source="/Images/userpage-btn.png" Style="{StaticResource Image_Style}" />
                     </Grid>

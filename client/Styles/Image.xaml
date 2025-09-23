@@ -11,11 +11,11 @@
         <Setter Property="Stretch"
                 Value="Uniform" />
         <Setter Property="Height"
-                Value="24" />
+                Value="18" />
         <Setter Property="Width"
-                Value="24" />
+                Value="18" />
         <Setter Property="Margin"
-                Value="32,0,0,0" />
+                Value="36,0,0,0" />
 
     </Style>
     
