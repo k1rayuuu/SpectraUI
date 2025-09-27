@@ -13,6 +13,7 @@
     <None Remove="Images\exit-btn.png" />
     <None Remove="Images\home-btn.png" />
     <None Remove="Images\icons-btn.png" />
+    <None Remove="Images\minimize-btn.png" />
     <None Remove="Images\settings-btn.png" />
     <None Remove="Images\shutdown_mo.png" />
     <None Remove="Images\sound-btn.png" />
@@ -48,6 +49,7 @@
     </Resource>
     <Resource Include="Images\home-btn.png" />
     <Resource Include="Images\icons-btn.png" />
+    <Resource Include="Images\minimize-btn.png" />
     <Resource Include="Images\settings-btn.png" />
     <Resource Include="Images\sound-btn.png" />
     <Resource Include="Images\SpectraUI-Logo.png">

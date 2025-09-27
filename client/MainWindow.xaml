@@ -60,7 +60,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button x:Name="MinimiseApp" Style="{StaticResource ExitApp}" Click="MinimiseApp_Click" />
+                <Button x:Name="MinimiseApp" Style="{StaticResource MininizeApp}" Click="MinimiseApp_Click" />
                 <Button x:Name="CloseApp" Style="{StaticResource ExitApp}" Click="CloseApp_Click" />
             </StackPanel>
                 <ContentControl Grid.Row="1" prism:RegionManager.RegionName="ContentRegion"/>
