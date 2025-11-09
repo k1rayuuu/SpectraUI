@@ -12,58 +12,92 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        ResizeMode="CanResize"
+        ResizeMode="NoResize"
         Background="Transparent">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="86" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Border Grid.ColumnSpan="2" Background="#62272d" MouseDown="Border_MouseDown" CornerRadius="32"/>
-        <Grid HorizontalAlignment="Left" Width="86">
-            <Border Background="#351518" CornerRadius="32,0,0,32"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="#191919" MouseDown="Border_MouseDown" CornerRadius="8, 8, 0, 0">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="86"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="32"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Image Source="/Images/SpectraUI-Logo.png" VerticalAlignment="Center" Height="40" Width="40" ></Image>
-                <RadioButton  Grid.Row="1" Command="{Binding NavigateHomeCommand}" Style="{StaticResource Btn_Style}">
-                        <Image Source="Images/home-btn.png" Style="{StaticResource Image_Style}" />
-                </RadioButton>
-                <RadioButton Grid.Row="2" Command="{Binding NavigateWallpaperCommand}" Style="{StaticResource Btn_Style}">
-                        <Image Source="/Images/wallpaper-btn.png" Style="{StaticResource Image_Style}" />
-                </RadioButton>
-                <RadioButton  Grid.Row="3" Command="{Binding NavigateTaskBarCommand}" Style="{StaticResource Btn_Style}">
-                        <Image Source="Images/icons-btn.png" Style="{StaticResource Image_Style}" />
-                </RadioButton>
-                <RadioButton Grid.Row="4" Command="{Binding NavigateSoundsCommand}" Style="{StaticResource Btn_Style}">
-                        <Image Source="/Images/sound-btn.png" Style="{StaticResource Image_Style}" />
-                </RadioButton>
-                <RadioButton Grid.Row="5" Command="{Binding NavigateSharePageCommand}" Style="{StaticResource Btn_Style}">
-                        <Image Source="/Images/settings-btn.png" Style="{StaticResource Image_Style}"/>
-                </RadioButton>
-                <RadioButton Grid.Row="7" Command="{Binding NavigateUserPageCommand}" Style="{StaticResource Btn_Style}" Margin="0,0,0,16">
-                        <Image Source="/Images/userpage-btn.png" Style="{StaticResource Image_Style}" />
-                </RadioButton>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="MinimiseApp" Style="{StaticResource MininizeApp}" Click="MinimiseApp_Click" Cursor="Hand"/>
+                    <Button x:Name="CloseApp" Style="{StaticResource ExitApp}" Click="CloseApp_Click" Cursor="Hand" />
+                </StackPanel>
             </Grid>
-        </Grid>
-        <Grid Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="64"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button x:Name="MinimiseApp" Style="{StaticResource MininizeApp}" Click="MinimiseApp_Click" />
-                <Button x:Name="CloseApp" Style="{StaticResource ExitApp}" Click="CloseApp_Click" />
-            </StackPanel>
-                <ContentControl Grid.Row="1" prism:RegionManager.RegionName="ContentRegion"/>
-        </Grid>
+        </Border>
+        <Border Grid.Row="1" Background="#0c0c0c" CornerRadius="0, 0, 8, 8">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="256"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Margin="12" Background="#191919" CornerRadius="8">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="86"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Image Source="/Images/SpectraUI-Logo.png" VerticalAlignment="Center" Height="40" Width="40"/>
+                        <TextBlock Text="SpectraUI" Style="{StaticResource Text_Style}" FontSize="26"/>
+                    </StackPanel>
+
+                    <RadioButton Grid.Row="1" Command="{Binding NavigateHomeCommand}" Style="{StaticResource Btn_Style}" Cursor="Hand">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Images/home-btn.png" VerticalAlignment="Center" Style="{StaticResource Image_Style}"/>
+                                <TextBlock Text="Главная" VerticalAlignment="Center" Style="{StaticResource Text_Style}"/>
+                            </StackPanel>
+                    </RadioButton>
+                    <RadioButton Grid.Row="2" Command="{Binding NavigateWallpaperCommand}" Style="{StaticResource Btn_Style}" Cursor="Hand">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Images/wallpaper-btn.png" Style="{StaticResource Image_Style}"/>
+                                <TextBlock Text="Обои" Style="{StaticResource Text_Style}"/>
+                            </StackPanel>
+                        </RadioButton>
+                    <RadioButton Grid.Row="3" Command="{Binding NavigateTaskBarCommand}" Style="{StaticResource Btn_Style}" Cursor="Hand">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Images/icons-btn.png" Style="{StaticResource Image_Style}"/>
+                                <TextBlock Text="Панель задач" Style="{StaticResource Text_Style}"/>
+                            </StackPanel>
+                        </RadioButton>
+                    <RadioButton Grid.Row="4" Command="{Binding NavigateSoundsCommand}" Style="{StaticResource Btn_Style}" Cursor="Hand">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Images/sound-btn.png" Style="{StaticResource Image_Style}"/>
+                                <TextBlock Text="Звуки системы" Style="{StaticResource Text_Style}"/>
+                            </StackPanel>
+                        </RadioButton>
+                    <RadioButton Grid.Row="5" Command="{Binding NavigateSharePageCommand}" Style="{StaticResource Btn_Style}" Cursor="Hand">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Images/settings-btn.png" Style="{StaticResource Image_Style}"/>
+                                <TextBlock Text="Настройки" Style="{StaticResource Text_Style}"/>
+                            </StackPanel>
+                        </RadioButton>
+                    <RadioButton Grid.Row="7" Command="{Binding NavigateUserPageCommand}" Style="{StaticResource Btn_Style}" Margin="0,0,0,16" Cursor="Hand">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Images/userpage-btn.png" Style="{StaticResource Image_Style}"/>
+                                <TextBlock Text="Личный кабинет" Style="{StaticResource Text_Style}"/>
+                            </StackPanel>
+                        </RadioButton>
+                </Grid>
+            </Border>
+
+                <Border Grid.Column="1" Background="#0c0c0c" CornerRadius="0,0,8,0">
+                    <ContentControl prism:RegionManager.RegionName="ContentRegion"/>
+                </Border>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

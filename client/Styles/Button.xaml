@@ -13,12 +13,12 @@
                 <ControlTemplate TargetType="RadioButton">
                     <Border x:Name="border"
                             Height="50"
-                            Width="50"
+                            Width="204"
                             CornerRadius="8"
                             BorderThickness="0">
                         <Border.Background>
                             <SolidColorBrush x:Name="BorderBackground"
-                                             Color="#351518" />
+                                             Color="#191919" />
                         </Border.Background>
                         <Grid>
                             <Border x:Name="Indicator"
@@ -44,8 +44,8 @@
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetName="BorderBackground"
                                                     Storyboard.TargetProperty="Color"
-                                                    From="#351518"
-                                                    To="#62272d"
+                                                    From="#191919"
+                                                    To="#393742"
                                                     Duration="0:0:0.3"/>
                                 </Storyboard>
                             </BeginStoryboard>
@@ -56,20 +56,22 @@
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetName="BorderBackground"
                                                     Storyboard.TargetProperty="Color"
-                                                    From="#62272d"
-                                                    To="#351518"
+                                                    From="#393742"
+                                                    To="#191919"
                                                     Duration="0:0:0.3"/>
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
-                        <Trigger Property="IsChecked"
-                                 Value="True">
-                            <Setter Property="Background"
-                                    TargetName="border"
-                                    Value="#62272d"/>
-                            <Setter Property="Visibility"
-                                    TargetName="Indicator"
-                                    Value="Visible"/>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="border" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                        <GradientStop Color="#9360fa" Offset="0.0"/>
+                                        <GradientStop Color="#4b0082" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="Indicator" Property="Visibility" Value="Visible"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -85,15 +87,15 @@
     <Style x:Key="ExitApp"
            TargetType="{x:Type Button}">
         <Setter Property="Height"
-                Value="16" />
+                Value="12" />
         <Setter Property="Width"
-                Value="16" />
+                Value="12" />
         <Setter Property="HorizontalAlignment"
                 Value="Right" />
         <Setter Property="VerticalAlignment"
                 Value="Top" />
         <Setter Property="Margin"
-                Value="0,24,24,0" />
+                Value="0,10,10,0" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -133,15 +135,15 @@
     <Style x:Key="MininizeApp"
            TargetType="{x:Type Button}">
         <Setter Property="Height"
-                Value="16" />
+                Value="12" />
         <Setter Property="Width"
-                Value="16" />
+                Value="12" />
         <Setter Property="HorizontalAlignment"
                 Value="Right" />
         <Setter Property="VerticalAlignment"
                 Value="Top" />
         <Setter Property="Margin"
-                Value="0,24,24,0" />
+                Value="0,10,10,0" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
