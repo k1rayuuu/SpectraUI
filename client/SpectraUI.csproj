@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>Images\SpectraUI-Logo.ico</ApplicationIcon>
+    <ApplicationIcon>Images\SpectraUILogo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,9 +17,12 @@
     <None Remove="Images\settings-btn.png" />
     <None Remove="Images\shutdown_mo.png" />
     <None Remove="Images\sound-btn.png" />
-    <None Remove="Images\SpectraUI-Logo.png" />
+    <None Remove="Images\SpectraUILogo.png" />
     <None Remove="Images\userpage-btn.png" />
     <None Remove="Images\wallpaper-btn.png" />
+    <None Remove="Styles\Fonts\Nunito-Black.ttf" />
+    <None Remove="Styles\Fonts\Nunito-Bold.ttf" />
+    <None Remove="Styles\Fonts\Nunito-SemiBold.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,7 +35,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Images\SpectraUI-Logo.ico" />
+    <Content Include="Images\SpectraUILogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\SpectraUILogo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Styles\Fonts\Nunito-Black.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -54,11 +66,14 @@
     <Resource Include="Images\minimize-btn.png" />
     <Resource Include="Images\settings-btn.png" />
     <Resource Include="Images\sound-btn.png" />
-    <Resource Include="Images\SpectraUI-Logo.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Images\userpage-btn.png" />
     <Resource Include="Images\wallpaper-btn.png" />
+    <Resource Include="Styles\Fonts\Nunito-Bold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Styles\Fonts\Nunito-SemiBold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

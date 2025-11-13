@@ -3,8 +3,10 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Windows;
-using SpectraUI.ViewModels;
 using SpectraUI.Views;
+using SpectraUI.ViewModels.level1;
+using SpectraUI.ViewModels.level0;
+using SpectraUI.Views.level0;
 
 namespace SpectraUI
 {
@@ -20,8 +22,12 @@ namespace SpectraUI
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterForNavigation<MainWindow, MainWindowViewModel>();
+            containerRegistry.RegisterForNavigation<MainPageView>();
+            containerRegistry.RegisterForNavigation<AuthPageView>();
+            containerRegistry.RegisterForNavigation<SettingsPageView>();
+
             containerRegistry.RegisterForNavigation<MainView>();
-            containerRegistry.RegisterForNavigation<MainWindow, MainWindowViewModel>(); 
             containerRegistry.RegisterForNavigation<WallpaperView>();
             containerRegistry.RegisterForNavigation<TaskBarView>();
             containerRegistry.RegisterForNavigation<SoundsView>();
@@ -32,6 +38,10 @@ namespace SpectraUI
         protected override void ConfigureViewModelLocator()
         {
             base.ConfigureViewModelLocator();
+
+            ViewModelLocationProvider.Register<MainPageView, MainPageViewModel>();
+            ViewModelLocationProvider.Register<AuthPageView, AuthPageViewModel>();
+            ViewModelLocationProvider.Register<SettingsPageView, SettingsPageViewModel>();
 
             ViewModelLocationProvider.Register<MainView, MainViewModel>();
             ViewModelLocationProvider.Register<WallpaperView, WallpaperViewModel>();

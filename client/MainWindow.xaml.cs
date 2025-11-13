@@ -1,5 +1,6 @@
 ﻿using Prism.Navigation.Regions;
 using SpectraUI.Views;
+using SpectraUI.Views.level0;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace SpectraUI
         public MainWindow(IRegionManager regionManager)
         {
             InitializeComponent();
-            regionManager.RegisterViewWithRegion("ContentRegion", typeof(MainView));
+            regionManager.RegisterViewWithRegion("ContentRegion", typeof(AuthPageView));
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
