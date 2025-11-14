@@ -17,7 +17,7 @@
                         </StackPanel>
                         <TextBox Style="{StaticResource SpectraTextBox}" Margin="8"/>
                         <TextBox Style="{StaticResource SpectraTextBox}" Margin="8"/>
-                        <RadioButton Grid.Row="5" Style="{StaticResource Btn1_Style}" Cursor="Hand" Margin="32">
+                        <RadioButton Grid.Row="5" Command="{Binding NavigateMainPageCommand}" Style="{StaticResource Btn1_Style}" Cursor="Hand" Margin="32">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <TextBlock Text="Войти" Style="{StaticResource Text_Style}" Margin="0"/>
                             </StackPanel>

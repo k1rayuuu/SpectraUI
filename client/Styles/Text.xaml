@@ -7,7 +7,7 @@
            TargetType="TextBlock">
 
         <Setter Property="FontFamily"
-                Value="Nunito SemiBold" />
+                Value="#Nunito-SemiBold" />
         <Setter Property="VerticalAlignment"
                 Value="Center" />
         <Setter Property="HorizontalAlignment"

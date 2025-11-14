@@ -9,7 +9,7 @@
     <Grid>
         <Border Background="#0c0c0c" CornerRadius="8">
             <Grid>
-                <RadioButton HorizontalAlignment="Left" VerticalAlignment="Bottom" Command="{Binding NavigateSettingsPageCommand}" Style="{StaticResource Btn_Style}" Cursor="Hand" Margin="24">
+                <RadioButton HorizontalAlignment="Left" VerticalAlignment="Bottom" Command="{Binding GoBackCommand}" Style="{StaticResource Btn_Style}" Cursor="Hand" Margin="24">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBlock Text="Назад" Style="{StaticResource Text_Style}" Margin="0"/>
                     </StackPanel>

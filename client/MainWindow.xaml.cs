@@ -1,19 +1,6 @@
-﻿using Prism.Navigation.Regions;
-using SpectraUI.Views;
-using SpectraUI.Views.level0;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SpectraUI.Views.level0;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace SpectraUI
 {
@@ -27,7 +14,16 @@ namespace SpectraUI
         public MainWindow(IRegionManager regionManager)
         {
             InitializeComponent();
-            regionManager.RegisterViewWithRegion("ContentRegion", typeof(AuthPageView));
+            Loaded += MainWindow_Loaded;
+            _regionManager = regionManager;
+            
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            var region = _regionManager.Regions["ContentRegion"];
+            var navigationService = region.NavigationService;
+            navigationService.RequestNavigate(new Uri(nameof(AuthPageView), UriKind.Relative));
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)

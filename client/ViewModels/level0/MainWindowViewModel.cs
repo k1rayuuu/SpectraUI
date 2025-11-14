@@ -1,9 +1,4 @@
 ﻿using SpectraUI.Views.level0;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SpectraUI.ViewModels.level0
 {
@@ -20,7 +15,9 @@ namespace SpectraUI.ViewModels.level0
 
         private void NavigateSettingsPage()
         {
-            _regionManager.RequestNavigate("ContentRegion", nameof(SettingsPageView));
+            var region = _regionManager.Regions["ContentRegion"];
+            var navigationService = region.NavigationService;
+            navigationService.RequestNavigate(new Uri(nameof(SettingsPageView), UriKind.Relative));
         }
     }
 }

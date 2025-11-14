@@ -7,6 +7,7 @@ using SpectraUI.Views;
 using SpectraUI.ViewModels.level1;
 using SpectraUI.ViewModels.level0;
 using SpectraUI.Views.level0;
+using System.Xml.Linq;
 
 namespace SpectraUI
 {
